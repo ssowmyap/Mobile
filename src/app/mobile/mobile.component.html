@@ -1,0 +1,16 @@
+<table border="2" class="table table-striped">
+
+  <thead>
+    <th><button type="button" class="btn btn-info" (click)="sortId(mobId)">Mobile Id</button></th>
+    <th><button type="button" class="btn btn-info"(click)="sortName(mobName)">Mobile Name</button></th>
+    <th><button type="button" class="btn btn-info"(click)="sortPrice(mobPrice)">Mobile Price</button></th>
+    <th>ACTION</th>
+  </thead>
+<tr *ngFor="let mobile of mobiles, let i=index">
+<td>{{mobile.mobId}}</td>
+<td>{{mobile.mobName}}</td>
+<td>{{mobile.mobPrice | currency:"USD"}}</td>
+<td><button class="btn btn-warning"(click)="deletemobiles(i)">Delete</button></td> 
+</tr>
+
+</table>
